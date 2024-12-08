@@ -1,0 +1,64 @@
+$date
+	Wed Oct 02 02:13:09 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_decrementor $end
+$var wire 3 ! D [2:0] $end
+$var reg 3 " A [2:0] $end
+$scope module uut $end
+$var wire 3 # A [2:0] $end
+$var wire 3 $ D [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 $
+b0 #
+b0 "
+b1 !
+$end
+#10
+b10 !
+b10 $
+b1 "
+b1 #
+#20
+b11 !
+b11 $
+b10 "
+b10 #
+#30
+b100 !
+b100 $
+b11 "
+b11 #
+#40
+b101 !
+b101 $
+b100 "
+b100 #
+#50
+b110 !
+b110 $
+b101 "
+b101 #
+#60
+b111 !
+b111 $
+b110 "
+b110 #
+#70
+b0 !
+b0 $
+b111 "
+b111 #
+#80

@@ -1,0 +1,231 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002598219ba70 .scope module, "t_module" "t_module" 2 33;
+ .timescale 0 0;
+v0000025982243e10_0 .net "FNAND", 0 0, L_00000259822472a0;  1 drivers
+v0000025982243eb0_0 .net "FNOR", 0 0, L_00000259822471c0;  1 drivers
+v00000259822458c0_0 .var "w", 0 0;
+v0000025982246180_0 .var "x", 0 0;
+v0000025982246220_0 .var "y", 0 0;
+v0000025982245320_0 .var "z", 0 0;
+S_000002598219ea40 .scope module, "np" "NAND" 2 38, 2 1 0, S_000002598219ba70;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "FNAND";
+    .port_info 1 /INPUT 1 "w";
+    .port_info 2 /INPUT 1 "x";
+    .port_info 3 /INPUT 1 "y";
+    .port_info 4 /INPUT 1 "z";
+L_0000025982247310 .functor NAND 1, v00000259822458c0_0, v00000259822458c0_0, C4<1>, C4<1>;
+L_00000259822473f0 .functor NAND 1, v0000025982246180_0, v0000025982246180_0, C4<1>, C4<1>;
+L_0000025982246970 .functor NAND 1, v0000025982246220_0, v0000025982246220_0, C4<1>, C4<1>;
+L_0000025982246e40 .functor NAND 1, v0000025982245320_0, v0000025982245320_0, C4<1>, C4<1>;
+L_0000025982247070 .functor NAND 1, v00000259822458c0_0, L_00000259822473f0, C4<1>, C4<1>;
+L_0000025982246eb0 .functor NAND 1, L_0000025982246970, L_0000025982246e40, C4<1>, C4<1>;
+L_0000025982247230 .functor NAND 1, L_0000025982247310, L_0000025982246e40, C4<1>, C4<1>;
+L_00000259822472a0 .functor NAND 1, L_0000025982247070, L_0000025982246eb0, L_0000025982247230, C4<1>;
+v0000025982196bd0_0 .net "FNAND", 0 0, L_00000259822472a0;  alias, 1 drivers
+v0000025982244130_0 .net "temp1", 0 0, L_0000025982247070;  1 drivers
+v0000025982244310_0 .net "temp2", 0 0, L_0000025982246eb0;  1 drivers
+v0000025982244630_0 .net "temp3", 0 0, L_0000025982247230;  1 drivers
+v00000259822439b0_0 .net "w", 0 0, v00000259822458c0_0;  1 drivers
+v0000025982244090_0 .net "w_inv", 0 0, L_0000025982247310;  1 drivers
+v00000259822443b0_0 .net "x", 0 0, v0000025982246180_0;  1 drivers
+v0000025982243f50_0 .net "x_inv", 0 0, L_00000259822473f0;  1 drivers
+v0000025982244270_0 .net "y", 0 0, v0000025982246220_0;  1 drivers
+v00000259822441d0_0 .net "y_inv", 0 0, L_0000025982246970;  1 drivers
+v0000025982244450_0 .net "z", 0 0, v0000025982245320_0;  1 drivers
+v0000025982243870_0 .net "z_inv", 0 0, L_0000025982246e40;  1 drivers
+S_000002598219ebd0 .scope module, "nr" "NOR" 2 37, 2 17 0, S_000002598219ba70;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "FNOR";
+    .port_info 1 /INPUT 1 "w";
+    .port_info 2 /INPUT 1 "x";
+    .port_info 3 /INPUT 1 "y";
+    .port_info 4 /INPUT 1 "z";
+L_00000259821f4160 .functor NOR 1, v00000259822458c0_0, v00000259822458c0_0, C4<0>, C4<0>;
+L_0000025982246890 .functor NOR 1, v0000025982246180_0, v0000025982246180_0, C4<0>, C4<0>;
+L_0000025982246d60 .functor NOR 1, v0000025982246220_0, v0000025982246220_0, C4<0>, C4<0>;
+L_0000025982246900 .functor NOR 1, v0000025982245320_0, v0000025982245320_0, C4<0>, C4<0>;
+L_0000025982246f90 .functor NOR 1, v00000259822458c0_0, L_0000025982246900, C4<0>, C4<0>;
+L_0000025982246dd0 .functor NOR 1, L_0000025982246890, L_0000025982246900, C4<0>, C4<0>;
+L_00000259822470e0 .functor NOR 1, L_00000259821f4160, L_0000025982246890, L_0000025982246d60, C4<0>;
+L_00000259822471c0 .functor NOR 1, L_0000025982246f90, L_0000025982246dd0, L_00000259822470e0, C4<0>;
+v0000025982243ff0_0 .net "FNOR", 0 0, L_00000259822471c0;  alias, 1 drivers
+v00000259822444f0_0 .net "temp1", 0 0, L_0000025982246f90;  1 drivers
+v0000025982243910_0 .net "temp2", 0 0, L_0000025982246dd0;  1 drivers
+v0000025982244590_0 .net "temp3", 0 0, L_00000259822470e0;  1 drivers
+v00000259822446d0_0 .net "w", 0 0, v00000259822458c0_0;  alias, 1 drivers
+v0000025982244770_0 .net "w_inv", 0 0, L_00000259821f4160;  1 drivers
+v0000025982243a50_0 .net "x", 0 0, v0000025982246180_0;  alias, 1 drivers
+v0000025982243af0_0 .net "x_inv", 0 0, L_0000025982246890;  1 drivers
+v0000025982243c30_0 .net "y", 0 0, v0000025982246220_0;  alias, 1 drivers
+v0000025982243b90_0 .net "y_inv", 0 0, L_0000025982246d60;  1 drivers
+v0000025982243cd0_0 .net "z", 0 0, v0000025982245320_0;  alias, 1 drivers
+v0000025982243d70_0 .net "z_inv", 0 0, L_0000025982246900;  1 drivers
+    .scope S_000002598219ba70;
+T_0 ;
+    %vpi_call 2 41 "$dumpfile", "t_modules.vcd" {0 0 0};
+    %vpi_call 2 42 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002598219ba70 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000259822458c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246180_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982246220_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000025982245320_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_000002598219ba70;
+T_1 ;
+    %delay 160, 0;
+    %vpi_call 2 62 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "2.v";
